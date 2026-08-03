@@ -14,10 +14,10 @@ npm run dev
 2. 选择 GitHub 仓库 `greyxiong/daily_knowledge`。
 3. Framework 选择 `Other`。
 4. Build Command 使用 `npm run build`。
-5. Output Directory 留空或使用项目根目录。
+5. Output Directory 使用 `public`。
 6. 点击 Deploy。之后你只需要收藏 Vercel 给出的固定网址。
 
-本项目是纯静态网站，`vercel.json` 会在部署前运行课程校验。连接 GitHub 后，每次 `main` 分支有新提交，Vercel 会自动发布。
+本项目是纯静态网站，`vercel.json` 会在部署前运行课程校验，并把可发布文件同步到 `public/`。连接 GitHub 后，每次 `main` 分支有新提交，Vercel 会自动发布。
 
 ## Secrets 和 API Key
 
