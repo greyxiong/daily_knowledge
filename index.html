@@ -82,13 +82,33 @@
       .lesson h2 span { color: var(--muted); font-size: 18px; font-weight: 550; }
       .read-toggle { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; color: var(--muted); font-size: 13px; cursor: pointer; }
       .definition { margin: 20px 0 16px; padding: 14px 16px; border-radius: 8px; background: var(--panel-strong); }
-      .section-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-      .section-grid section, .exercise { padding: 15px 16px; border: 1px solid var(--line); border-radius: 8px; }
+      .section-grid { display: block; }
+      .section-grid section {
+        padding: 15px 0;
+        border-top: 1px solid var(--line);
+      }
+      .section-grid section:first-child { border-top: 0; padding-top: 0; }
+      .exercise {
+        padding: 12px 14px;
+        border: 1px dashed var(--line);
+        border-radius: 8px;
+        background: color-mix(in srgb, var(--panel-strong) 45%, transparent);
+      }
       .lesson h3 { margin: 0 0 5px; font-size: 15px; }
       .lesson p { margin: 0; }
       .exercise { margin-top: 12px; }
+      .exercise h3 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .exercise h3 span {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 650;
+      }
       .exercise textarea {
-        display: block; width: 100%; min-height: 96px; resize: vertical; margin-top: 12px;
+        display: block; width: 100%; min-height: 56px; resize: vertical; margin-top: 10px;
         padding: 10px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text);
       }
       .lesson-nav { display: flex; justify-content: space-between; align-items: center; min-height: 38px; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
@@ -100,7 +120,6 @@
         .content { padding: 24px 14px 72px; }
         .hero h2 { font-size: 29px; }
         .lesson { padding: 22px 18px; }
-        .section-grid { grid-template-columns: 1fr; }
         .toc-group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 8px; }
         .toc-heading { grid-column: 1 / -1; }
       }
@@ -211,9 +230,9 @@
               ${sections.map(([title, value]) => `<section><h3>${title}</h3><p>${escapeHtml(value)}</p></section>`).join("")}
             </div>
             <section class="exercise">
-              <h3>小练习</h3>
+              <h3>小练习 <span>Optional</span></h3>
               <p>${escapeHtml(course.exercise)}</p>
-              <textarea data-note="${course.day}" rows="4" placeholder="记录你的练习答案">${escapeHtml(state.notes[course.day] || "")}</textarea>
+              <textarea data-note="${course.day}" rows="2" placeholder="想写再写，留一个想法就好">${escapeHtml(state.notes[course.day] || "")}</textarea>
             </section>
             <nav class="lesson-nav">
               ${previous ? `<a href="#day-${previous.day}">‹ Day ${previous.day}</a>` : "<span></span>"}
