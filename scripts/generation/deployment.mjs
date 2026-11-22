@@ -37,6 +37,7 @@ export async function confirmDeployment({
   day,
   lessonSha,
   hook,
+  protectionBypass,
   fetch = globalThis.fetch,
   attempts = 33,
   hookAfter = 5,
@@ -71,16 +72,25 @@ export async function confirmDeployment({
     url.searchParams.set("nonce", randomUUID());
     try {
       const response = await fetch(url.href, {
-        cache: "no-store", headers: { "Cache-Control": "no-cache" }, redirect: "error",
+        cache: "no-store", headers: { "Cache-Control": "no-cache",
+          ...(protectionBypass ? { "x-vercel-protection-bypass": protectionBypass } : {}) }, redirect: "manual",
         signal: AbortSignal.timeout(5_000),
       });
       if (!response.ok) {
         await response.body?.cancel();
+        const location = response.headers.get("location");
+        const redirect = location ? new URL(location, url) : undefined;
+        if ([401, 403].includes(response.status) ||
+            (response.status >= 300 && response.status < 400 && redirect?.origin === "https://vercel.com" &&
+             /^\/(?:login|sso-api)(?:\/|$)/u.test(redirect.pathname))) {
+          throw deploymentError("PRODUCTION_AUTH_REQUIRED");
+        }
         return undefined;
       }
       const manifest = await response.json();
       if (gitSha.test(manifest?.commit) && Array.isArray(manifest.lessons)) return manifest;
-    } catch {
+    } catch (error) {
+      if (error instanceof GenerationError) throw error;
       return undefined;
     }
     return undefined;
@@ -141,6 +151,7 @@ async function main() {
       repo: process.env.GITHUB_REPOSITORY,
       token: process.env.GH_TOKEN,
       hook: process.env.VERCEL_DEPLOY_HOOK,
+      protectionBypass: process.env.VERCEL_AUTOMATION_BYPASS_SECRET,
       log: (message) => console.error(message),
     });
     if (result.status === "already-included") {

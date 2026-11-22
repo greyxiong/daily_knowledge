@@ -87,10 +87,13 @@ export function renderCourse(markdown,{sources=[],generated=false}={}){
  source=source.replace(/<Entity\b[^>]*\/>/g,tag=>escape(tag.match(/\bvalue="([^"]*)"/)?.[1]||''));
  source=source.replace(/\s+on[A-Z]\w*=\{[^}]*\}/g,'');
  try{source=expand(source,scope,issues);}catch{issues.push({type:'component',message:'An original component could not be adapted; source text preserved.'});}
+ // A nested chart's layout indentation is not an indented Markdown code block.
+ // Fenced and inline code remain opaque until restoreCode below.
+ source=source.replace(/^[\t ]*<svg\b[\s\S]*?<\/svg>/gm,svg=>svg.trim().replace(/\r?\n[\t ]*/g,' ').replace(/\bstrokeDasharray=/g,'stroke-dasharray='));
  source=normalizeTags(source,issues);
  let html=sanitizeHtml(md.render(math.restoreCode(source)),{
   allowedTags:[...sanitizeHtml.defaults.allowedTags,'details','summary','svg','path','circle','rect','line','polyline','polygon','text','g','aside','small','sup','sub'],
-  allowedAttributes:{'*':['class'],a:['href','title','target','rel'],svg:['viewBox','viewbox','width','height','xmlns','role','aria-label'],path:['d','fill','stroke','stroke-width','opacity'],rect:['x','y','width','height','rx','fill','fill-opacity','stroke','stroke-opacity','stroke-width','opacity'],circle:['cx','cy','r','fill','stroke','stroke-width','opacity'],line:['x1','y1','x2','y2','stroke','stroke-width'],polyline:['points','fill','stroke','stroke-width'],polygon:['points','fill','stroke'],text:['x','y','dx','dy','fill','font-size','font-family','text-anchor'],g:['transform','fill','stroke'],td:['colspan','rowspan'],th:['colspan','rowspan']},
+  allowedAttributes:{'*':['class'],a:['href','title','target','rel'],svg:['viewBox','viewbox','width','height','xmlns','role','aria-label'],path:['d','fill','stroke','stroke-width','stroke-dasharray','opacity'],rect:['x','y','width','height','rx','fill','fill-opacity','stroke','stroke-opacity','stroke-width','opacity'],circle:['cx','cy','r','fill','stroke','stroke-width','opacity'],line:['x1','y1','x2','y2','stroke','stroke-width','stroke-dasharray'],polyline:['points','fill','stroke','stroke-width','stroke-dasharray'],polygon:['points','fill','stroke'],text:['x','y','dx','dy','fill','font-size','font-family','text-anchor'],g:['transform','fill','stroke'],td:['colspan','rowspan'],th:['colspan','rowspan']},
   allowedSchemes:['https','http','mailto'],allowProtocolRelative:false,parser:{lowerCaseTags:false,lowerCaseAttributeNames:false},
   transformTags:{
    a:(tagName,attribs)=>({tagName,attribs:{...attribs,rel:'noopener noreferrer'}}),

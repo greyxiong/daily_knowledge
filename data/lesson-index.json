@@ -1122,5 +1122,27 @@
         "title": "doi.org"
       }
     ]
+  },
+  {
+    "day": 71,
+    "title": "汤普森采样（Thompson Sampling）",
+    "chineseName": "汤普森采样",
+    "englishName": "Thompson Sampling",
+    "module": "统计学与决策科学",
+    "discipline": "机器学习",
+    "path": "content/lessons/day-071.md",
+    "sha256": "e5a0d0ba4c081cc6ab6ab5a15bba52d11dfdedba0ee24de60fb08883a2a98cc7",
+    "source": "generated",
+    "publishedOn": "2026-11-22",
+    "sources": [
+      {
+        "url": "https://proceedings.neurips.cc/paper/2011/file/e53a0a2978c28872a4505bdb51db06dc-Paper.pdf",
+        "title": "An Empirical Evaluation of Thompson Sampling"
+      },
+      {
+        "url": "https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf",
+        "title": "A Tutorial on Thompson Sampling"
+      }
+    ]
   }
 ]

@@ -171,7 +171,7 @@ function adjacentCitationSets(caseTokens, statement) {
 
 export function checkDraft(data, research, index, apiKey) {
   if (!data || !nonempty(data.markdown, 42_000) ||
-      data.markdown.includes(apiKey) || /<\/?[a-z][^>]*>|!\[|\{@body|/iu.test(data.markdown) ||
+      (typeof apiKey === 'string' && apiKey.length > 0 && data.markdown.includes(apiKey)) || /<\/?[a-z][^>]*>|!\[|\{@body|/iu.test(data.markdown) ||
       !boundedArray(data.claims, 1, 10) || !data.claims.every((claim) =>
         claim && identifier(claim.id) && nonempty(claim.statement, 800) &&
         boundedArray(claim.evidenceIds, 1, 8) && claim.evidenceIds.every(identifier)) ||

@@ -1,6 +1,10 @@
 # 每日课程发布
 
-GitHub Actions 的 **Daily course** 工作流在 UTC 04:00 排程，也就是北京时间 12:00。排程是开始时间，生成、审核和部署都需要时间。GitHub 在繁忙时可能延迟或丢弃排程。GitHub 不会自动批量补发缺失日期。 [GitHub Actions 排程](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onschedule)
+默认使用 **Codex 本机订阅任务**，在北京时间 12:00 启动。电脑须开机联网、应用运行且订阅有可用额度。任务读取版本控制中的 [订阅任务规范](../automation/subscription-course-prompt.md)，真实浏览来源、写作并独立审核，再使用无模型调用的 `scripts/publish-reviewed-course.mjs` 保存课程。失败日志和候选审核包留在忽略的 `work/subscription/`；GitHub 与 Vercel 保留云端检查和部署日志。可在 Scheduled 中运行任务，或在本 chat 指定日期补发、重试。 [官方定时任务说明](https://learn.chatgpt.com/docs/automations?surface=app)
+
+默认方式不需要 API Key、不读取原始私人聊天、不自动购买额度，也不自动切换计费路径。消耗现有订阅限额，额外 OpenAI API 费用为 $0；额度耗尽时停止。公开仓库标准 GitHub Actions 计算与 Vercel Hobby 免费额度内托管可为 $0。[订阅计费](https://learn.chatgpt.com/docs/pricing)
+
+下面是保留的 **手动 API 备选**，用户明确选择后才使用。GitHub 工作流已取消 `schedule`，不会与订阅任务重复定时生成。API 方式的费用估算不适用于默认订阅任务。
 
 ## 配置 OpenAI 密钥
 
@@ -8,6 +12,7 @@ GitHub Actions 的 **Daily course** 工作流在 UTC 04:00 排程，也就是北
 2. 在 GitHub 的仓库设置进入 **Secrets and variables → Actions → New repository secret**。以 `OPENAI_API_KEY` 保存密钥。保留在密钥管理界面，避免写入仓库、聊天、构建产物或命令参数。缺少密钥时工作流失败，并明确报告 `MISSING_API_KEY`。 [GitHub Actions 密钥](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
 3. 默认模型是 `gpt-6.2-sol`。若需要，可在 Actions 的 **Variables** 中设置 `OPENAI_MODEL`。替换模型必须同时支持 Responses API、结构化输出和网页搜索。 [GPT‑6.2 Sol](https://developers.openai.com/api/docs/models/gpt-6.2-sol)
 4. 在 Vercel 确认现有项目 `daily-knowledge` 的 Production Branch 是 `main`，并与本仓库相连。默认通过 GitHub 的部署集成发布。只有确认集成需要额外触发时，才在现有项目为 `main` 创建 Deploy Hook，把完整 URL 保存为可选的 Actions Secret `VERCEL_DEPLOY_HOOK`。 [Vercel 的 GitHub 集成](https://vercel.com/docs/git/vercel-for-github) · [Deploy Hooks](https://vercel.com/docs/deploy-hooks)
+5. 原团队网址要求 Vercel 登录。要让自动任务核验这个原网址，请由账户所有者在原项目的 **Settings → Deployment Protection → Protection Bypass for Automation** 配置自动化密钥，并在 GitHub Actions Secrets 保存为 `VERCEL_AUTOMATION_BYPASS_SECRET`。此操作不关闭网站登录保护。程序只将其作为请求头发给固定的原网站，不放进 URL、日志或前端。缺少或失效的密钥会报告 `PRODUCTION_AUTH_REQUIRED`，课程仍保留在 GitHub，修正配置后可重跑。 [Vercel 自动化验证](https://vercel.com/docs/deployment-protection/methods-to-bypass-deployment-protection/protection-bypass-automation)
 
 ## 首次运行和补发
 

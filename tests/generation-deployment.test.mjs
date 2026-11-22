@@ -76,6 +76,45 @@ const lessonSha = "a".repeat(64);
 const newer = "b".repeat(40);
 const manifest = (sha, lessons = [{ day: 71, sha256: lessonSha }]) => Response.json({ commit: sha, lessons });
 
+test("a protected production alias can be verified with its automation secret", async () => {
+  const bypass = "fake-vercel-automation-secret";
+  let authenticatedReads = 0;
+  const result = await verify({
+    protectionBypass: bypass,
+    fetch: async (url, options) => {
+      if (url === endpoint) {
+        assert.equal(options.headers["x-vercel-protection-bypass"], undefined);
+        return response([status("success")]);
+      }
+      assert.equal(new URL(url).origin, production);
+      assert.equal(options.redirect, "manual");
+      if (options.headers["x-vercel-protection-bypass"] !== bypass) {
+        return new Response(null, { status: 401 });
+      }
+      authenticatedReads += 1;
+      return manifest(commit);
+    },
+  });
+  assert.equal(authenticatedReads, 1);
+  assert.deepEqual(result, { status: "deployed", commit });
+});
+
+test("Vercel authentication reports a configuration error without retrying or weakening protection", async () => {
+  for (const httpStatus of [401, 403, 307]) {
+    let reads = 0;
+    await assert.rejects(verify({
+      fetch: async (url) => {
+        if (url === endpoint) return response([status("success")]);
+        assert.equal(new URL(url).origin, production);
+        reads += 1;
+        return new Response(null, { status: httpStatus,
+          headers: { Location: "https://vercel.com/sso-api?url=protected" } });
+      },
+    }), { code: "PRODUCTION_AUTH_REQUIRED" });
+    assert.equal(reads, 1);
+  }
+});
+
 test("a successful preview status does not prove that the production URL serves the commit", async () => {
   let productionReads = 0;
   await assert.rejects(verify({

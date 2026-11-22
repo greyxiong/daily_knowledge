@@ -31,10 +31,10 @@ npm run dev
 
 ## 每日生成
 
-见 [自动化说明](docs/automation.md)。GitHub 工作流按每天北京时间 12:00 计划启动，也支持手动预览、重试和单日补发。调度、生成和构建可能延迟，不保证整点已上线。
+默认使用已登录 Codex 的订阅额度，由本机定时任务在北京时间 12:00 启动。电脑须开机联网、应用运行且订阅有可用额度。详见 [订阅任务规范](automation/subscription-course-prompt.md) 与 [自动化说明](docs/automation.md)。无需 API Key，不自动购买额度，也不自动切换到 API 计费。调度、生成和构建可能延迟，不保证整点已上线。
 
-需要在 GitHub 仓库 Actions Secrets 安全设置 `OPENAI_API_KEY`，不要放进聊天、代码、前端或日志。默认模型 `gpt-6.2-sol`，可用仓库变量 `OPENAI_MODEL` 调整。缺少密钥时任务会明确失败，不发布内容。ChatGPT/Codex 订阅本身不保证覆盖这里的 API 消耗。
+GitHub 的 API 生成工作流仅保留为手动备选，已取消定时触发。只有用户明确选择 API 时才需要 `OPENAI_API_KEY`。默认订阅流程由 Codex 真实浏览来源并独立审阅，`scripts/publish-reviewed-course.mjs` 校验审核包、公式、引用、编号及日期，保存课程时不调用模型 API。
 
 流程：完整课程索引 → 课程地图与近期原文 → 来源研究 → 结构化草稿 → 独立复核与公式检查 → 追加一课 → 构建 → 推送 → 核对原 Vercel 项目的对应提交状态。所有检查通过前不写入已发布课程。
 
-预计 API 预算 $10–20/月；真实消耗以日志中的 token 和搜索调用数为准。公开仓库标准 GitHub Actions 计算通常免费；Vercel Hobby 免费额度内可为 $0，Pro 基础费 $20/月起，另可能有超额费用。价格查询日期为 2026-11-21，参考 https://developers.openai.com/api/docs/pricing 、https://docs.github.com/en/billing/concepts/product-billing/github-actions 、https://vercel.com/docs/plans 。
+默认订阅方式不产生 OpenAI API 账单，会使用现有 ChatGPT/Codex 订阅额度，受其限额影响。公开仓库标准 GitHub Actions 计算通常免费；Vercel Hobby 免费额度内可为 $0。额外预览与重试会消耗订阅额度。参考 https://learn.chatgpt.com/docs/pricing 、https://docs.github.com/en/billing/concepts/product-billing/github-actions 、https://vercel.com/docs/plans/hobby 。

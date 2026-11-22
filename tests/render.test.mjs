@@ -80,3 +80,19 @@ test('does not treat template expressions in historical components as Markdown c
  assert.match(html,/示例/);
  assert.equal(issues.length,0);
 });
+
+test('renders nested historical SVG charts instead of showing their source as Markdown code', () => {
+ const source=`<box>\n  <grid><grid-item>\n      <svg viewBox="0 0 160 125" width="100%">\n        <path d="M15 104 H148" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4"/>\n      </svg>\n  </grid-item></grid>\n</box>`;
+ const {html,issues}=renderCourse(source);
+ assert.match(html,/<svg viewBox="0 0 160 125"/);
+ assert.match(html,/<path[^>]*stroke-dasharray="4 4"/);
+ assert.doesNotMatch(html,/&lt;svg|<pre>/);
+ assert.equal(issues.length,0);
+});
+
+test('keeps intentionally fenced SVG examples as literal code', () => {
+ const {html}=renderCourse('~~~html\n<svg viewBox="0 0 10 10">\n <path d="M0 0"/>\n</svg>\n~~~');
+ assert.match(html,/<pre><code/);
+ assert.match(html,/&lt;svg/);
+ assert.doesNotMatch(html,/<svg/);
+});

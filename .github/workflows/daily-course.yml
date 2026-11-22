@@ -1,8 +1,6 @@
-name: Daily course
+name: Daily course (manual API fallback)
 
 on:
-  schedule:
-    - cron: "0 4 * * *"
   workflow_dispatch:
     inputs:
       mode:
@@ -138,6 +136,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
           COURSE_SHA: ${{ steps.commit.outputs.sha }}
           COURSE_DAY: ${{ steps.generation.outputs.day }}
           LESSON_HASH: ${{ steps.commit.outputs.lesson_hash }}
