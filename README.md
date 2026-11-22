@@ -1,90 +1,40 @@
 # 多元思维模型每日课程网站
 
-这是一个自动更新的“多元思维模型”知识网站。课程保存在 `data/courses.json`，页面会自动生成目录、搜索、上一课/下一课、已读状态、练习笔记、阅读进度，并支持手机、桌面和深色模式。
+继续维护原站：https://daily-knowledge-xiongjy517-7913s-projects.vercel.app/
 
-## 本地预览
+## 内容与迁移
+
+- `content/lessons/day-001.md` 至 `day-070.md` 是从原「每日知识」对话恢复的课程原文，未改写。
+- `data/lesson-index.json` 是课程索引，记录编号、标题、学科、来源消息、原文 SHA-256 和关联来源链接。
+- Day 1 原对话存在两个版本；采用对话顺序中后一个版本，另一个保存在 `content/versions/day-001-v1.md`。
+- `data/migration-report.json` 和 `docs/migration.md` 记录覆盖情况和恢复限制。
+- 原始聊天、私人问题、芯片专题、账户信息没有进入本仓库。完整私人导出仅在本地处理。
+
+## 本地运行
+
+使用 Node.js 22 或以上：
 
 ```bash
+npm ci
+npm test
+npm run build
 npm run dev
 ```
 
-## 部署到 Vercel
+打开 http://localhost:5173 。保留现有界面、`#day-N` 锚点，以及 `mental-model-read`、`mental-model-notes` 浏览器存储键。阅读进度只保存在当前浏览器。
 
-1. 打开你的 Vercel 新建页面：<https://vercel.com/new?teamSlug=xiongjy517-7913s-projects>
-2. 选择 GitHub 仓库 `greyxiong/daily_knowledge`。
-3. Framework 选择 `Other`。
-4. Build Command 使用 `npm run build`。
-5. Output Directory 使用 `public`。
-6. 点击 Deploy。之后你只需要收藏 Vercel 给出的固定网址。
+构建时从独立 Markdown 原文生成完整课程数据，渲染公式、安全处理 HTML，复制本地公式字体到 `public/`。部署只使用派生的 `public/`，私有聊天源文件不参与构建。
 
-本项目是纯静态网站，`vercel.json` 会在部署前运行课程校验，并把可发布文件同步到 `public/`。连接 GitHub 后，每次 `main` 分支有新提交，Vercel 会自动发布。
+## 原项目部署
 
-## Secrets 和 API Key
+`vercel.json` 仍运行 `npm run build`，输出目录仍是 `public`。GitHub 连接的原 Vercel 项目为 `xiongjy517-7913s-projects/daily-knowledge`。不创建新项目或新网址。当前分支推送后需观察实际 Vercel 部署状态，不能把 Git 推送成功等同于上线成功。
 
-当前方案不使用 OpenAI API，也不会把任何 API key 写入前端代码或提交到 Git。
+## 每日生成
 
-每日课程生成由 Codex 自动化完成，使用 ChatGPT/Codex 订阅能力。Vercel 只负责静态网站托管，因此网站运行本身不需要 OpenAI API key。
+见 [自动化说明](docs/automation.md)。GitHub 工作流按每天北京时间 12:00 计划启动，也支持手动预览、重试和单日补发。调度、生成和构建可能延迟，不保证整点已上线。
 
-如果以后改成 GitHub Actions 直接调用第三方 API，必须把 key 放在 GitHub Repository Secrets 或 Vercel Environment Variables 中，不能写入 `src/`、`data/`、`.env` 或任何会提交到仓库的文件。
+需要在 GitHub 仓库 Actions Secrets 安全设置 `OPENAI_API_KEY`，不要放进聊天、代码、前端或日志。默认模型 `gpt-6.2-sol`，可用仓库变量 `OPENAI_MODEL` 调整。缺少密钥时任务会明确失败，不发布内容。ChatGPT/Codex 订阅本身不保证覆盖这里的 API 消耗。
 
-## 每天中午 12:00 自动新增课程
+流程：完整课程索引 → 课程地图与近期原文 → 来源研究 → 结构化草稿 → 独立复核与公式检查 → 追加一课 → 构建 → 推送 → 核对原 Vercel 项目的对应提交状态。所有检查通过前不写入已发布课程。
 
-使用 Codex 自动化创建一个每日任务，工作目录指向本仓库，任务提示词使用 `automation/daily-course-prompt.md` 的内容。
-
-建议配置：
-
-- 时间：每天 12:00
-- 时区：Asia/Shanghai
-- 工作目录：本仓库根目录
-- 任务：读取 `prompts/course-system.md` 和 `data/courses.json`，新增下一节课程，校验后提交并推送
-
-自动化会先读取已有课程，自动延续 Day 编号，并避免重复课程。失败时不会提交或发布，已有网站内容保持不变。
-
-## 课程规则
-
-课程写作规则维护在：
-
-```text
-prompts/course-system.md
-```
-
-每节新课必须包含：
-
-- Day 编号
-- 中文和英文模型名
-- 所属学科
-- 一句话定义
-- 直觉解释
-- 真实案例
-- 工作和生活应用
-- 与旧模型的连接
-- 常见误区
-- 小练习
-
-Day 1-22 来自初始 HTML 文件。如果原内容较简略，本项目保持原样，不主动重写。
-
-## 手动新增一课
-
-手动编辑 `data/courses.json`，在数组末尾追加一个课程对象，然后运行：
-
-```bash
-npm run validate
-npm run build
-```
-
-验证通过后提交并推送到 `main`，Vercel 会自动部署。
-
-## 回滚
-
-两种方式都可以：
-
-- GitHub 回滚：在 GitHub 中 revert 对应 commit，然后推送到 `main`，Vercel 会自动部署回滚后的版本。
-- Vercel 回滚：进入项目 Deployments，选择一个历史部署并 Promote to Production。
-
-## 故障排查
-
-- 新课程没有出现：确认 GitHub `main` 是否有新增课程 commit，再检查 Vercel Deployments 是否成功。
-- 自动化失败：查看 Codex 自动化运行结果，通常是生成 JSON 不合法、校验失败、网络失败或 Git 推送冲突。
-- Vercel 构建失败：在 Vercel 日志里查看 `npm run validate` 或 `npm run build` 的错误。
-- 编号重复：运行 `npm run validate`，修复 `data/courses.json` 中重复或不连续的 Day。
-- 页面能打开但内容不更新：刷新浏览器缓存，或确认访问的是 Production 域名而不是旧预览地址。
+预计 API 预算 $10–20/月；真实消耗以日志中的 token 和搜索调用数为准。公开仓库标准 GitHub Actions 计算通常免费；Vercel Hobby 免费额度内可为 $0，Pro 基础费 $20/月起，另可能有超额费用。价格查询日期为 2026-11-21，参考 https://developers.openai.com/api/docs/pricing 、https://docs.github.com/en/billing/concepts/product-billing/github-actions 、https://vercel.com/docs/plans 。

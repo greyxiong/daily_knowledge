@@ -1,0 +1,18 @@
+{
+  "courseCount": 70,
+  "missing": [],
+  "duplicates": [
+    {
+      "day": 1,
+      "path": "content/versions/day-001-v1.md",
+      "sha256": "b425552c90252eb7e85a6b3882f481ca53dca62c04eadabc8f869d1f1f0ac59d",
+      "messageId": "78af0534-67bf-4684-b16c-90261f5cab86",
+      "selectedMessageId": "efdcbd0b-ebfe-4be5-9890-348f996426ad"
+    }
+  ],
+  "policy": "Exact source bodies; last conversation-order version selected; prior versions preserved. Only course texts and public source URLs are exported.",
+  "limitations": [
+    "ChatGPT-specific citation identifiers cannot be reliably matched one-to-one to returned source URLs; related source URLs are listed without claiming a precise mapping.",
+    "Original image binaries and attachments were not downloaded. Component adaptation is a presentation transform, never a source-text edit."
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "day": 64,
+    "issues": [
+      {
+        "type": "image",
+        "message": "Original remote illustration was not downloaded."
+      }
+    ]
+  },
+  {
+    "day": 65,
+    "issues": [
+      {
+        "type": "interactive",
+        "message": "Interactive slider shown at original default value."
+      }
+    ]
+  },
+  {
+    "day": 68,
+    "issues": [
+      {
+        "type": "image",
+        "message": "Original remote illustration was not downloaded."
+      }
+    ]
+  }
+]

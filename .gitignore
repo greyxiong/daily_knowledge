@@ -4,3 +4,15 @@ dist
 .env
 .env.*
 !.env.example
+
+
+work/
+.superpowers/
+.vercel/
+public/assets/
+public/content/
+public/data/
+public/index.html
+data/courses.json
+
+public/

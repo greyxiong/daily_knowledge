@@ -1,4 +1,11 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "headers": [
+    {
+      "source": "/deployment.json",
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }]
+    }
+  ]
 }
+

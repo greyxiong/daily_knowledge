@@ -1,0 +1,148 @@
+name: Daily course
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preview a lesson or publish it to production
+        type: choice
+        options: [dry-run, publish]
+        default: dry-run
+      date:
+        description: Shanghai date for a single backfill (YYYY-MM-DD, optional)
+        type: string
+      allow_early:
+        description: Allow today's run before noon Shanghai time
+        type: boolean
+        default: false
+
+concurrency:
+  group: daily-course-main
+  cancel-in-progress: false
+  queue: max
+
+permissions:
+  actions: read
+  contents: write
+  statuses: read
+
+jobs:
+  course:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Bring main up to date
+        run: git pull --ff-only origin main
+      - run: npm ci
+      - name: Choose date and mode
+        id: target
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MANUAL_DATE: ${{ inputs.date }}
+          MANUAL_MODE: ${{ inputs.mode }}
+        run: |
+          if [ -n "$MANUAL_DATE" ]; then
+            target="$MANUAL_DATE"
+          else
+            started="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" --jq .created_at)"
+            target="$(TZ=Asia/Shanghai date -d "$started" +%F)"
+          fi
+          if [[ ! "$target" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "::error::Use a Shanghai date in YYYY-MM-DD format."
+            exit 1
+          fi
+          mode=publish
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then
+            mode="${MANUAL_MODE:-dry-run}"
+          fi
+          case "$mode" in
+            dry-run|publish) ;;
+            *) echo "::error::Invalid publication mode."; exit 1 ;;
+          esac
+          printf 'date=%s\nmode=%s\n' "$target" "$mode" >> "$GITHUB_OUTPUT"
+      - name: Generate and review one lesson
+        id: generation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          COURSE_DATE: ${{ steps.target.outputs.date }}
+          COURSE_MODE: ${{ steps.target.outputs.mode }}
+          ALLOW_EARLY: ${{ inputs.allow_early }}
+        run: |
+          args=(--date "$COURSE_DATE")
+          if [ "$COURSE_MODE" = dry-run ]; then args+=(--dry-run); fi
+          if [ "$ALLOW_EARLY" = true ]; then args+=(--allow-early); fi
+          result="$RUNNER_TEMP/daily-course-result.json"
+          node scripts/generate-course.mjs "${args[@]}" > "$result"
+          jq -r '"status=\(.status)\nday=\(.day)\npath=\(.path)"' "$result" >> "$GITHUB_OUTPUT"
+          jq -r '"Day \(.day) · \(.date) (Asia/Shanghai) · \(.status)"' "$result" >> "$GITHUB_STEP_SUMMARY"
+      - name: Save dry-run lesson
+        if: steps.generation.outputs.status == 'dry-run'
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-course-dry-run
+          path: ${{ steps.generation.outputs.path }}
+          if-no-files-found: error
+          retention-days: 3
+      - name: Validate the generated lesson and build the website
+        if: steps.generation.outputs.status == 'published'
+        run: |
+          npm test
+          npm run build
+      - name: Push the publication or recover its existing commit
+        id: commit
+        if: steps.target.outputs.mode == 'publish'
+        env:
+          STATUS: ${{ steps.generation.outputs.status }}
+          COURSE_DAY: ${{ steps.generation.outputs.day }}
+          LESSON_PATH: ${{ steps.generation.outputs.path }}
+        run: |
+          if [ "$STATUS" = published ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add -- data/lesson-index.json "$LESSON_PATH"
+            git commit -m "Add Day $COURSE_DAY mental model"
+            git push origin HEAD:refs/heads/main
+            sha="$(git rev-parse HEAD)"
+          elif [ "$STATUS" = existing ]; then
+            sha="$(git log -1 --diff-filter=A --format=%H -- "$LESSON_PATH")"
+          else
+            echo "::error::Unknown publication state."
+            exit 1
+          fi
+          if [[ ! "$sha" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Could not identify the exact publication commit."
+            exit 1
+          fi
+          set -o pipefail
+          lesson_hash="$(git show "${sha}:${LESSON_PATH}" | node --input-type=module -e '
+            import { createHash } from "node:crypto";
+            import { readFileSync } from "node:fs";
+            process.stdout.write(createHash("sha256").update(readFileSync(0)).digest("hex"));
+          ')"
+          printf 'sha=%s\nlesson_hash=%s\n' "$sha" "$lesson_hash" >> "$GITHUB_OUTPUT"
+          printf 'GitHub publication commit: `%s`\n' "$sha" >> "$GITHUB_STEP_SUMMARY"
+      - name: Confirm production deployment
+        if: steps.commit.outputs.sha != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+          COURSE_SHA: ${{ steps.commit.outputs.sha }}
+          COURSE_DAY: ${{ steps.generation.outputs.day }}
+          LESSON_HASH: ${{ steps.commit.outputs.lesson_hash }}
+        run: |
+          if ! node scripts/generation/deployment.mjs "$COURSE_SHA" "$COURSE_DAY" "$LESSON_HASH" >> "$GITHUB_STEP_SUMMARY"; then
+            echo "Vercel deployment was not confirmed. The lesson remains on GitHub." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi

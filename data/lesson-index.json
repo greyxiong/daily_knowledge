@@ -1,0 +1,1126 @@
+[
+  {
+    "day": 1,
+    "title": "反馈回路（Feedback Loop）",
+    "chineseName": "反馈回路",
+    "englishName": "Feedback Loop",
+    "module": "系统思维",
+    "discipline": "系统思维",
+    "path": "content/lessons/day-001.md",
+    "sha256": "89afcf755a74930668848f374bd0b2fb988032afd5d79ce129ac73053f6a65d9",
+    "source": "history",
+    "messageId": "efdcbd0b-ebfe-4be5-9890-348f996426ad",
+    "publishedOn": "2026-07-13",
+    "sources": []
+  },
+  {
+    "day": 2,
+    "title": "存量（Stock）与流量（Flow）",
+    "chineseName": "存量（Stock）与流量",
+    "englishName": "Flow",
+    "module": "系统思维",
+    "discipline": "系统思维",
+    "path": "content/lessons/day-002.md",
+    "sha256": "630d7be4db5e95503b625964b4e3eaeb5d0d40ff18f7d87909a64589c58b0026",
+    "source": "history",
+    "messageId": "1c712b2c-e4f8-496a-964e-b6bb0dfbba47",
+    "publishedOn": "2026-07-14",
+    "sources": []
+  },
+  {
+    "day": 3,
+    "title": "延迟（Delay）",
+    "chineseName": "延迟",
+    "englishName": "Delay",
+    "module": "系统思维",
+    "discipline": "系统思维",
+    "path": "content/lessons/day-003.md",
+    "sha256": "8fc99058ec54debde3cc1185801cae247c43c139b45e82d528dbb1b7d57a5741",
+    "source": "history",
+    "messageId": "55318550-dbc1-433a-875e-eb9823f45d3c",
+    "publishedOn": "2026-07-15",
+    "sources": []
+  },
+  {
+    "day": 4,
+    "title": "非线性（Nonlinearity）",
+    "chineseName": "非线性",
+    "englishName": "Nonlinearity",
+    "module": "系统思维",
+    "discipline": "系统思维",
+    "path": "content/lessons/day-004.md",
+    "sha256": "2c7bc13c2d3df580e1e1bfc0a75a0095da3e873f56fb6c04e7785ed41623abcd",
+    "source": "history",
+    "messageId": "a7f53bdb-afdb-4706-a101-e48cb2d7e53c",
+    "publishedOn": "2026-07-16",
+    "sources": []
+  },
+  {
+    "day": 5,
+    "title": "涌现（Emergence）",
+    "chineseName": "涌现",
+    "englishName": "Emergence",
+    "module": "系统思维",
+    "discipline": "系统思维",
+    "path": "content/lessons/day-005.md",
+    "sha256": "04493c5183b6fc2c2bae9c8f17108af1d89ef5cfa08463d45d3a845d2a57acf4",
+    "source": "history",
+    "messageId": "ad1cc8d2-7d77-4272-8611-e3b62aca3c5d",
+    "publishedOn": "2026-07-17",
+    "sources": []
+  },
+  {
+    "day": 6,
+    "title": "杠杆点（Leverage Points）",
+    "chineseName": "杠杆点",
+    "englishName": "Leverage Points",
+    "module": "系统思维",
+    "discipline": "系统思维",
+    "path": "content/lessons/day-006.md",
+    "sha256": "f2f0c5b49367e372c99c5bdd9e74908474419eb53e9eed44b2b07d26848d2dbd",
+    "source": "history",
+    "messageId": "538d37a1-0c49-403f-b667-d3aded9006c5",
+    "publishedOn": "2026-07-18",
+    "sources": []
+  },
+  {
+    "day": 7,
+    "title": "基准率（Base Rate）",
+    "chineseName": "基准率",
+    "englishName": "Base Rate",
+    "module": "概率与不确定性",
+    "discipline": "概率与不确定性",
+    "path": "content/lessons/day-007.md",
+    "sha256": "47e40901beebdfb9d507ff31a70c6eb402dee7973f827c363ea3c6c85803cc2f",
+    "source": "history",
+    "messageId": "dbc8693e-754d-4e37-903d-b5694076c58b",
+    "publishedOn": "2026-07-19",
+    "sources": []
+  },
+  {
+    "day": 8,
+    "title": "贝叶斯更新（Bayesian Updating）",
+    "chineseName": "贝叶斯更新",
+    "englishName": "Bayesian Updating",
+    "module": "概率与不确定性",
+    "discipline": "概率与不确定性",
+    "path": "content/lessons/day-008.md",
+    "sha256": "9ec260139bbd181b77cc82d3cc19831b019f76419fbe6ee85651c3da12380972",
+    "source": "history",
+    "messageId": "6bc996c8-d2d2-4adb-b787-57e12914b35a",
+    "publishedOn": "2026-07-20",
+    "sources": []
+  },
+  {
+    "day": 9,
+    "title": "期望值（Expected Value）",
+    "chineseName": "期望值",
+    "englishName": "Expected Value",
+    "module": "概率与不确定性",
+    "discipline": "概率与不确定性",
+    "path": "content/lessons/day-009.md",
+    "sha256": "7c3db87da42289f251d92aa9c42e73793b6b1e108b085d8270c464d32146bde2",
+    "source": "history",
+    "messageId": "f3fd2412-f054-446b-b485-2b8171be8765",
+    "publishedOn": "2026-07-21",
+    "sources": []
+  },
+  {
+    "day": 10,
+    "title": "风险（Risk）与不确定性（Uncertainty）",
+    "chineseName": "风险（Risk）与不确定性",
+    "englishName": "Uncertainty",
+    "module": "概率与不确定性",
+    "discipline": "概率与不确定性",
+    "path": "content/lessons/day-010.md",
+    "sha256": "94ff262153fee7ab007f6e9400fe9e7b66f59ce7caec2af831efb5b248417b15",
+    "source": "history",
+    "messageId": "e9963872-a9fc-4491-81c3-106ba32e686a",
+    "publishedOn": "2026-07-22",
+    "sources": []
+  },
+  {
+    "day": 11,
+    "title": "能力圈（Circle of Competence）",
+    "chineseName": "能力圈",
+    "englishName": "Circle of Competence",
+    "module": "决策与经济学",
+    "discipline": "决策与经济学",
+    "path": "content/lessons/day-011.md",
+    "sha256": "c95f73e9d11a64b16a1e80afb11cadcaf9159470bb92635019ae4fa2a310d3a6",
+    "source": "history",
+    "messageId": "13f4129e-f931-4eb8-8d3d-a777a58b1072",
+    "publishedOn": "2026-07-23",
+    "sources": []
+  },
+  {
+    "day": 12,
+    "title": "激励（Incentives）",
+    "chineseName": "激励",
+    "englishName": "Incentives",
+    "module": "决策与经济学",
+    "discipline": "决策与经济学",
+    "path": "content/lessons/day-012.md",
+    "sha256": "b47fd616644fd481c8dcdc97f3f8cd3eb36ba52a633377ac017441e844186e57",
+    "source": "history",
+    "messageId": "aca51526-eae2-4729-a0da-534cab435aab",
+    "publishedOn": "2026-07-24",
+    "sources": []
+  },
+  {
+    "day": 13,
+    "title": "机会成本（Opportunity Cost）",
+    "chineseName": "机会成本",
+    "englishName": "Opportunity Cost",
+    "module": "决策与经济学",
+    "discipline": "决策与经济学",
+    "path": "content/lessons/day-013.md",
+    "sha256": "bc7246813a10748c8c3bac89922e247aa4f949ec3bdfe576cc3bdc66448bc684",
+    "source": "history",
+    "messageId": "782149f0-5f65-423e-82f6-d89d91cbdcf9",
+    "publishedOn": "2026-07-25",
+    "sources": []
+  },
+  {
+    "day": 14,
+    "title": "沉没成本（Sunk Cost）",
+    "chineseName": "沉没成本",
+    "englishName": "Sunk Cost",
+    "module": "决策与经济学",
+    "discipline": "决策与经济学",
+    "path": "content/lessons/day-014.md",
+    "sha256": "8f44cb36e0c1f8369bc5dded216e7a0bd21157039b6b37ddf341288152597797",
+    "source": "history",
+    "messageId": "27e80fbb-bf78-47d1-b6a7-3da740f0c7e2",
+    "publishedOn": "2026-07-26",
+    "sources": []
+  },
+  {
+    "day": 15,
+    "title": "边际收益递减（Diminishing Marginal Returns）",
+    "chineseName": "边际收益递减",
+    "englishName": "Diminishing Marginal Returns",
+    "module": "决策与经济学",
+    "discipline": "决策与经济学",
+    "path": "content/lessons/day-015.md",
+    "sha256": "e2a1bc312b064c66b97c444f2dc15e4a77782e84627f6c8eb43ea03e6dcb3f63",
+    "source": "history",
+    "messageId": "e42a4285-b458-45dd-b4ed-1abf11561ee0",
+    "publishedOn": "2026-07-27",
+    "sources": []
+  },
+  {
+    "day": 16,
+    "title": "可选性（Optionality）",
+    "chineseName": "可选性",
+    "englishName": "Optionality",
+    "module": "决策与经济学",
+    "discipline": "决策与经济学",
+    "path": "content/lessons/day-016.md",
+    "sha256": "8451dbe6ccd4ee4771d06456d29f80738e21dcc029a70938964f2afb7f65b928",
+    "source": "history",
+    "messageId": "efc9305d-387e-4991-a84c-b9a28174eea8",
+    "publishedOn": "2026-07-28",
+    "sources": []
+  },
+  {
+    "day": 17,
+    "title": "反脆弱（Antifragility）",
+    "chineseName": "反脆弱",
+    "englishName": "Antifragility",
+    "module": "决策与经济学",
+    "discipline": "决策与经济学",
+    "path": "content/lessons/day-017.md",
+    "sha256": "b3bd91efb73a9863c5df1009103c9a9f1f01e9ee1d0bcb599faa63303acd368d",
+    "source": "history",
+    "messageId": "9b3bcd21-6de7-4e0f-9548-038d0f16947f",
+    "publishedOn": "2026-07-29",
+    "sources": []
+  },
+  {
+    "day": 18,
+    "title": "损失厌恶（Loss Aversion）",
+    "chineseName": "损失厌恶",
+    "englishName": "Loss Aversion",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-018.md",
+    "sha256": "a2d6756c92082bb518e160165438a879efe2b8c24466e4201a7cc61791ab4ac9",
+    "source": "history",
+    "messageId": "ab6536b2-58d9-4e94-9fa9-04fff384a7cd",
+    "publishedOn": "2026-07-30",
+    "sources": []
+  },
+  {
+    "day": 19,
+    "title": "禀赋效应（Endowment Effect）",
+    "chineseName": "禀赋效应",
+    "englishName": "Endowment Effect",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-019.md",
+    "sha256": "255eab4624ef332f81167b2a3b554c206e0e856928540fcf707cde487ea74524",
+    "source": "history",
+    "messageId": "0ed9c98a-8fde-40e0-9b65-bd378bbba77b",
+    "publishedOn": "2026-07-31",
+    "sources": []
+  },
+  {
+    "day": 20,
+    "title": "确认偏误（Confirmation Bias）",
+    "chineseName": "确认偏误",
+    "englishName": "Confirmation Bias",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-020.md",
+    "sha256": "4c7ecc1ed07999bb355a0b2f22a576410884f96c1194b7d6293295d026748fb5",
+    "source": "history",
+    "messageId": "e90d19cd-5e1d-4e33-ba80-80ab64ea15b1",
+    "publishedOn": "2026-08-01",
+    "sources": []
+  },
+  {
+    "day": 21,
+    "title": "锚定效应（Anchoring Effect）",
+    "chineseName": "锚定效应",
+    "englishName": "Anchoring Effect",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-021.md",
+    "sha256": "7a77f652bb3d5fa8e0d895734dfef79c3486725faad9429066dda7eea47b4b69",
+    "source": "history",
+    "messageId": "7391be2a-609f-4686-8a02-c5c4269ea2b2",
+    "publishedOn": "2026-08-02",
+    "sources": []
+  },
+  {
+    "day": 22,
+    "title": "可得性启发（Availability Heuristic）",
+    "chineseName": "可得性启发",
+    "englishName": "Availability Heuristic",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-022.md",
+    "sha256": "9c757652ea6fc10da4c113783f1ee6105e9ffb73387d40281b4d0ed68efc771f",
+    "source": "history",
+    "messageId": "ad3b39ae-02ad-4cc9-9378-4f4960bc8763",
+    "publishedOn": "2026-08-03",
+    "sources": []
+  },
+  {
+    "day": 23,
+    "title": "幸存者偏差（Survivorship Bias）",
+    "chineseName": "幸存者偏差",
+    "englishName": "Survivorship Bias",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-023.md",
+    "sha256": "1b2245848688ef534eb5992c2fe8c5e60fb01afe261bbd59fa5f250f380ebbfc",
+    "source": "history",
+    "messageId": "c62b321f-83b3-449b-ac9a-618b6af46a26",
+    "publishedOn": "2026-08-04",
+    "sources": []
+  },
+  {
+    "day": 24,
+    "title": "逆向思维（Inversion）",
+    "chineseName": "逆向思维",
+    "englishName": "Inversion",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-024.md",
+    "sha256": "32b16fae3d3ce7022832cf12a1fa15c6d0b0c67cddbc9e3c4f8f38c4c8b8917b",
+    "source": "history",
+    "messageId": "b8655540-4a34-45ba-b4ea-1a0a9ff5d5f3",
+    "publishedOn": "2026-08-05",
+    "sources": []
+  },
+  {
+    "day": 25,
+    "title": "二阶思维（Second-Order Thinking）",
+    "chineseName": "二阶思维",
+    "englishName": "Second-Order Thinking",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-025.md",
+    "sha256": "2aca788e39e0cf84f73b6f8b1f635203c6f741796546b70c05cb0f55520de9e5",
+    "source": "history",
+    "messageId": "bb11716c-47d4-4354-89be-4af5d9d505a7",
+    "publishedOn": "2026-08-06",
+    "sources": []
+  },
+  {
+    "day": 26,
+    "title": "古德哈特定律（Goodhart's Law）",
+    "chineseName": "古德哈特定律",
+    "englishName": "Goodhart's Law",
+    "module": "认知偏差",
+    "discipline": "认知偏差",
+    "path": "content/lessons/day-026.md",
+    "sha256": "ca0cdbd3fe806666ba33a55e73c1bd55ddf78fc13a9b2e93eaa6a613275fdb91",
+    "source": "history",
+    "messageId": "76da81a1-7630-4103-a8bc-dcf1d32470d9",
+    "publishedOn": "2026-08-07",
+    "sources": []
+  },
+  {
+    "day": 27,
+    "title": "委托—代理问题（Principal–Agent Problem）",
+    "chineseName": "委托—代理问题",
+    "englishName": "Principal–Agent Problem",
+    "module": "博弈与激励",
+    "discipline": "博弈与激励",
+    "path": "content/lessons/day-027.md",
+    "sha256": "0af06a2c4c3710654c843240fc9f2780d9d541b4b137d9451782afad2ed7439e",
+    "source": "history",
+    "messageId": "068f3a1e-4a8e-4f2e-ac06-3bd4279bb36c",
+    "publishedOn": "2026-08-13",
+    "sources": []
+  },
+  {
+    "day": 28,
+    "title": "机制设计（Mechanism Design）",
+    "chineseName": "机制设计",
+    "englishName": "Mechanism Design",
+    "module": "博弈与激励",
+    "discipline": "博弈与激励",
+    "path": "content/lessons/day-028.md",
+    "sha256": "c8106e11d5fec03c575060fe0ca8d32c0fad0feeb7d2f4092794fe533410c0fd",
+    "source": "history",
+    "messageId": "cd017a41-492f-48ac-9be2-5696d6eb67f0",
+    "publishedOn": "2026-08-14",
+    "sources": []
+  },
+  {
+    "day": 29,
+    "title": "纳什均衡（Nash Equilibrium）",
+    "chineseName": "纳什均衡",
+    "englishName": "Nash Equilibrium",
+    "module": "博弈与激励",
+    "discipline": "博弈与激励",
+    "path": "content/lessons/day-029.md",
+    "sha256": "c798c3d2b75312f02909c9a22fda7f5e0dc60423c9f1632cd85abfb9e15872f0",
+    "source": "history",
+    "messageId": "103f8cf6-f9f6-433d-af5e-e78bcce98844",
+    "publishedOn": "2026-08-15",
+    "sources": []
+  },
+  {
+    "day": 30,
+    "title": "公地悲剧（Tragedy of the Commons）",
+    "chineseName": "公地悲剧",
+    "englishName": "Tragedy of the Commons",
+    "module": "博弈与激励",
+    "discipline": "博弈与激励",
+    "path": "content/lessons/day-030.md",
+    "sha256": "90eee82b94533b7d09fb7da89024177a0ceea7b503c86a4dbaf61ba0669b2f83",
+    "source": "history",
+    "messageId": "4bdd7305-db66-4bb3-baf1-1a275f654f23",
+    "publishedOn": "2026-08-16",
+    "sources": []
+  },
+  {
+    "day": 31,
+    "title": "路径依赖（Path Dependence）",
+    "chineseName": "路径依赖",
+    "englishName": "Path Dependence",
+    "module": "风险与决策",
+    "discipline": "风险与决策",
+    "path": "content/lessons/day-031.md",
+    "sha256": "0f8923b1a1ba90e2fa2a384b7feea665d56f4ee8867f4ef5dd3668a474ea906c",
+    "source": "history",
+    "messageId": "fd80e5b9-e0ae-48cd-9333-9bbe65741ad5",
+    "publishedOn": "2026-08-17",
+    "sources": []
+  },
+  {
+    "day": 32,
+    "title": "贝叶斯更新（Bayesian Updating）",
+    "chineseName": "贝叶斯更新",
+    "englishName": "Bayesian Updating",
+    "module": "风险与决策",
+    "discipline": "风险与决策",
+    "path": "content/lessons/day-032.md",
+    "sha256": "d58dc6837527899e4c34205cad10e1743f51fe4759daaa16c9842ea109cd0578",
+    "source": "history",
+    "messageId": "6854f1cd-68ac-4f7c-8c49-bc514863bbb1",
+    "publishedOn": "2026-08-18",
+    "sources": []
+  },
+  {
+    "day": 33,
+    "title": "基准率忽视（Base Rate Neglect）",
+    "chineseName": "基准率忽视",
+    "englishName": "Base Rate Neglect",
+    "module": "风险与决策",
+    "discipline": "风险与决策",
+    "path": "content/lessons/day-033.md",
+    "sha256": "ab6c16309d3b53170c1fb45bbd061896be4a98d33afb0586e97634a1f9036391",
+    "source": "history",
+    "messageId": "31b65f1e-8b02-49a5-ac42-02da7efc6ef4",
+    "publishedOn": "2026-08-19",
+    "sources": []
+  },
+  {
+    "day": 34,
+    "title": "期望值（Expected Value）",
+    "chineseName": "期望值",
+    "englishName": "Expected Value",
+    "module": "风险与决策",
+    "discipline": "风险与决策",
+    "path": "content/lessons/day-034.md",
+    "sha256": "9c5b4bb85e7215836f4a9a7a12c67eec91244ac076f0a3bb0644dad55c71ad5c",
+    "source": "history",
+    "messageId": "57f6adbd-1bfa-4c23-a4fe-c4bb0b157e4b",
+    "publishedOn": "2026-08-20",
+    "sources": []
+  },
+  {
+    "day": 35,
+    "title": "破产风险（Risk of Ruin）",
+    "chineseName": "破产风险",
+    "englishName": "Risk of Ruin",
+    "module": "风险与决策",
+    "discipline": "风险与决策",
+    "path": "content/lessons/day-035.md",
+    "sha256": "b796027cd078f37912479b233bd40f0484312c75a92088ad171760def06c1ef4",
+    "source": "history",
+    "messageId": "10d42d74-875f-4189-9474-ded755c7c480",
+    "publishedOn": "2026-08-21",
+    "sources": []
+  },
+  {
+    "day": 36,
+    "title": "凯利准则（Kelly Criterion）",
+    "chineseName": "凯利准则",
+    "englishName": "Kelly Criterion",
+    "module": "风险与决策",
+    "discipline": "风险与决策",
+    "path": "content/lessons/day-036.md",
+    "sha256": "eeac864b806a202025a2ed331dcd06d8133a1ab31be2758c122ead0792b0961c",
+    "source": "history",
+    "messageId": "1ed9e2fa-bfa6-4e25-baba-65439b0b0195",
+    "publishedOn": "2026-08-22",
+    "sources": []
+  },
+  {
+    "day": 37,
+    "title": "安全边际（Margin of Safety）",
+    "chineseName": "安全边际",
+    "englishName": "Margin of Safety",
+    "module": "风险与决策",
+    "discipline": "风险与决策",
+    "path": "content/lessons/day-037.md",
+    "sha256": "16e06120789f0aac954aabb979023e31249f37e20e4a8ca16ff556e16a4b3d58",
+    "source": "history",
+    "messageId": "19e9abc0-edec-4a31-8276-b376cae5ebc6",
+    "publishedOn": "2026-08-23",
+    "sources": []
+  },
+  {
+    "day": 38,
+    "title": "冗余与韧性（Redundancy & Resilience）",
+    "chineseName": "冗余与韧性",
+    "englishName": "Redundancy & Resilience",
+    "module": "风险与决策",
+    "discipline": "风险与决策",
+    "path": "content/lessons/day-038.md",
+    "sha256": "a9882318e32c6414e010fc235e77ce8a8fc5708d51cf473fb063486d007594c0",
+    "source": "history",
+    "messageId": "6cad800d-a3ac-447e-a37f-438471f51412",
+    "publishedOn": "2026-08-24",
+    "sources": []
+  },
+  {
+    "day": 39,
+    "title": "排队论（Queueing Theory）",
+    "chineseName": "排队论",
+    "englishName": "Queueing Theory",
+    "module": "系统与韧性",
+    "discipline": "系统与韧性",
+    "path": "content/lessons/day-039.md",
+    "sha256": "f46bc96cc935333850dea18a6fbce99e79162b8fb8b263520edc98dc171a1b63",
+    "source": "history",
+    "messageId": "55a12c27-29e8-4c15-8c7a-7eb4f2140792",
+    "publishedOn": "2026-08-25",
+    "sources": []
+  },
+  {
+    "day": 40,
+    "title": "瓶颈理论（Theory of Constraints）",
+    "chineseName": "瓶颈理论",
+    "englishName": "Theory of Constraints",
+    "module": "系统与韧性",
+    "discipline": "系统与韧性",
+    "path": "content/lessons/day-040.md",
+    "sha256": "6060a65e4f9db10e57d9ad148bff9041a8d48f19e8c017d776bfcc85cfbaf7a4",
+    "source": "history",
+    "messageId": "e976093b-7d7c-46b0-8e0a-a63087c4439f",
+    "publishedOn": "2026-08-26",
+    "sources": []
+  },
+  {
+    "day": 41,
+    "title": "反脆弱性（Antifragility）",
+    "chineseName": "反脆弱性",
+    "englishName": "Antifragility",
+    "module": "系统与韧性",
+    "discipline": "系统与韧性",
+    "path": "content/lessons/day-041.md",
+    "sha256": "760678a6a679e4d8c98f4c15002b82d9dd5a686a92ab347d4d6f22c422d3afcc",
+    "source": "history",
+    "messageId": "1cc0701c-b046-4355-bfff-60cbd3314b42",
+    "publishedOn": "2026-08-27",
+    "sources": []
+  },
+  {
+    "day": 42,
+    "title": "凸性与凹性（Convexity & Concavity）",
+    "chineseName": "凸性与凹性",
+    "englishName": "Convexity & Concavity",
+    "module": "系统与韧性",
+    "discipline": "系统与韧性",
+    "path": "content/lessons/day-042.md",
+    "sha256": "be8c2a7e5a879d8aef4751ab193609271390e3e80f5d9063a4062d300c9afd11",
+    "source": "history",
+    "messageId": "1e17bb53-8587-4b42-b81d-fd448180caea",
+    "publishedOn": "2026-08-28",
+    "sources": []
+  },
+  {
+    "day": 43,
+    "title": "选择权（Optionality）",
+    "chineseName": "选择权",
+    "englishName": "Optionality",
+    "module": "系统与韧性",
+    "discipline": "系统与韧性",
+    "path": "content/lessons/day-043.md",
+    "sha256": "68405134401b180d6794c4403583e4f7d2f2c4a40d17c45b71393c41cfbc047b",
+    "source": "history",
+    "messageId": "503eb367-a8b3-44f8-b0ad-d804031a7b20",
+    "publishedOn": "2026-08-29",
+    "sources": []
+  },
+  {
+    "day": 44,
+    "title": "信息价值（Value of Information, VOI）",
+    "chineseName": "信息价值",
+    "englishName": "Value of Information, VOI",
+    "module": "信息与模型",
+    "discipline": "信息与模型",
+    "path": "content/lessons/day-044.md",
+    "sha256": "3b6c817ce86bf16b7ff0a7b5786ab50ba2d2d67093b7feeb4aaf745229865a95",
+    "source": "history",
+    "messageId": "2c5f20ed-486b-47c5-9428-af339106df28",
+    "publishedOn": "2026-08-30",
+    "sources": []
+  },
+  {
+    "day": 45,
+    "title": "探索 vs. 利用（Exploration vs. Exploitation）",
+    "chineseName": "探索 vs. 利用",
+    "englishName": "Exploration vs. Exploitation",
+    "module": "信息与模型",
+    "discipline": "信息与模型",
+    "path": "content/lessons/day-045.md",
+    "sha256": "b8d35324053ef3d07f12e35483c29ca71610b7cd74000d1b50c1e3f9072ddc0f",
+    "source": "history",
+    "messageId": "91057d52-b9a8-4e2f-87c3-f510da6c9f88",
+    "publishedOn": "2026-08-31",
+    "sources": []
+  },
+  {
+    "day": 46,
+    "title": "多样性预测定理（Diversity Prediction Theorem）",
+    "chineseName": "多样性预测定理",
+    "englishName": "Diversity Prediction Theorem",
+    "module": "信息与模型",
+    "discipline": "信息与模型",
+    "path": "content/lessons/day-046.md",
+    "sha256": "c01c04e1c726d46468176b9084100b2a8405310bceb3c2e3e118470d3e42895d",
+    "source": "history",
+    "messageId": "17bc7bc3-3d7f-40fe-9efd-10afefec9304",
+    "publishedOn": "2026-09-01",
+    "sources": []
+  },
+  {
+    "day": 47,
+    "title": "相关性错误（Correlated Errors）",
+    "chineseName": "相关性错误",
+    "englishName": "Correlated Errors",
+    "module": "信息与模型",
+    "discipline": "信息与模型",
+    "path": "content/lessons/day-047.md",
+    "sha256": "89a91665b2d9f7d27650cab4c0bbea4d70b9d48f8b3335d43b32581fcef085a2",
+    "source": "history",
+    "messageId": "dde5bfd7-3f12-4567-aace-e94a9c0bad36",
+    "publishedOn": "2026-09-02",
+    "sources": []
+  },
+  {
+    "day": 48,
+    "title": "鲁棒性（Robustness）与敏感性分析（Sensitivity Analysis）",
+    "chineseName": "鲁棒性（Robustness）与敏感性分析",
+    "englishName": "Sensitivity Analysis",
+    "module": "信息与模型",
+    "discipline": "信息与模型",
+    "path": "content/lessons/day-048.md",
+    "sha256": "d5896c1a5d7d58544f8d3a53ed736085c299d9a6426b9861c750050e247a4188",
+    "source": "history",
+    "messageId": "2f780304-1ef4-41c6-a1cf-7b876680d81d",
+    "publishedOn": "2026-09-03",
+    "sources": []
+  },
+  {
+    "day": 49,
+    "title": "回归均值（Regression to the Mean）",
+    "chineseName": "回归均值",
+    "englishName": "Regression to the Mean",
+    "module": "信息与模型",
+    "discipline": "信息与模型",
+    "path": "content/lessons/day-049.md",
+    "sha256": "7c8a58ffe1904821efe58f451ec1c4ae42b09df9b17c0e2f943875bc60f4db62",
+    "source": "history",
+    "messageId": "ad394602-278f-498c-86d2-e233495b2d44",
+    "publishedOn": "2026-09-04",
+    "sources": []
+  },
+  {
+    "day": 50,
+    "title": "古德哈特定律（Goodhart’s Law）",
+    "chineseName": "古德哈特定律",
+    "englishName": "Goodhart’s Law",
+    "module": "信息与模型",
+    "discipline": "信息与模型",
+    "path": "content/lessons/day-050.md",
+    "sha256": "d7eb6d1ac9cb765935c8270ce6670ca0d4bfc8494ef9b88a086dfd7714ab7cd3",
+    "source": "history",
+    "messageId": "f4bc0593-b75b-45c3-8d5d-c62fa2b10037",
+    "publishedOn": "2026-09-05",
+    "sources": []
+  },
+  {
+    "day": 51,
+    "title": "卢卡斯批判（Lucas Critique）",
+    "chineseName": "卢卡斯批判",
+    "englishName": "Lucas Critique",
+    "module": "信息与模型",
+    "discipline": "信息与模型",
+    "path": "content/lessons/day-051.md",
+    "sha256": "a300d2f11a1dc5412952bdeee2985b68c35dcb81600360ccdc65d74ec3f480ff",
+    "source": "history",
+    "messageId": "ec89c8e9-2246-4ebd-becd-395465d54f6f",
+    "publishedOn": "2026-09-06",
+    "sources": []
+  },
+  {
+    "day": 52,
+    "title": "反事实思维（Counterfactual Thinking）",
+    "chineseName": "反事实思维",
+    "englishName": "Counterfactual Thinking",
+    "module": "因果推断",
+    "discipline": "因果推断",
+    "path": "content/lessons/day-052.md",
+    "sha256": "6f73e0ee66b5e636058008bec719772c1cbd70095ab70d10beaf4d4139d0f608",
+    "source": "history",
+    "messageId": "3fc6fb7a-8225-4bc6-a965-3655a662d5f7",
+    "publishedOn": "2026-09-07",
+    "sources": []
+  },
+  {
+    "day": 53,
+    "title": "辛普森悖论（Simpson’s Paradox）",
+    "chineseName": "辛普森悖论",
+    "englishName": "Simpson’s Paradox",
+    "module": "因果推断",
+    "discipline": "因果推断",
+    "path": "content/lessons/day-053.md",
+    "sha256": "43e44710e251db81274f55dfd1f5ff50f20d0757478bfc10d3ca768ad51f5ee6",
+    "source": "history",
+    "messageId": "852eef27-167b-4c97-832c-72e67d9943b0",
+    "publishedOn": "2026-09-08",
+    "sources": []
+  },
+  {
+    "day": 54,
+    "title": "因果图（DAG）与后门路径",
+    "chineseName": "因果图（DAG）与后门路径",
+    "englishName": "",
+    "module": "因果推断",
+    "discipline": "因果推断",
+    "path": "content/lessons/day-054.md",
+    "sha256": "ae682e7345aca7a5ef554a80d472e727b684d4587f17735655c2698a270bfecd",
+    "source": "history",
+    "messageId": "94261e96-0227-42ab-b6fb-72ce7b7869b0",
+    "publishedOn": "2026-09-09",
+    "sources": []
+  },
+  {
+    "day": 55,
+    "title": "贝叶斯更新（Bayesian Updating）",
+    "chineseName": "贝叶斯更新",
+    "englishName": "Bayesian Updating",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-055.md",
+    "sha256": "e93e30ade97ede353f34623bf6ede9fce2085e939d825e8018b23b27bf27de6f",
+    "source": "history",
+    "messageId": "eb3364b5-66f5-4db6-b8a4-53cce97fef97",
+    "publishedOn": "2026-09-10",
+    "sources": []
+  },
+  {
+    "day": 56,
+    "title": "信号检测理论（Signal Detection Theory）",
+    "chineseName": "信号检测理论",
+    "englishName": "Signal Detection Theory",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-056.md",
+    "sha256": "cf510b593db166cad91285d4ec2948ea9edfa4effc1623d0189d4a672588faa1",
+    "source": "history",
+    "messageId": "8ff03a22-f076-4aac-90eb-81991cbc0718",
+    "publishedOn": "2026-09-11",
+    "sources": []
+  },
+  {
+    "day": 57,
+    "title": "期望值与方差（Expected Value & Variance）",
+    "chineseName": "期望值与方差",
+    "englishName": "Expected Value & Variance",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-057.md",
+    "sha256": "8e8b0b65b742e3969ee75505ca18d9575037996cbf2004477a9ea1ed4a46be0b",
+    "source": "history",
+    "messageId": "10c20dbc-50d3-4d39-8e43-8b7a788aa64a",
+    "publishedOn": "2026-09-12",
+    "sources": []
+  },
+  {
+    "day": 58,
+    "title": "毁灭风险（Risk of Ruin）",
+    "chineseName": "毁灭风险",
+    "englishName": "Risk of Ruin",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-058.md",
+    "sha256": "74241c5c3b3b9292619460181e0127fd090ad2a2b9382c30d02e6ce9dd9c9e73",
+    "source": "history",
+    "messageId": "5bbd5946-c3a6-4228-8b64-46c26cedbef3",
+    "publishedOn": "2026-09-13",
+    "sources": []
+  },
+  {
+    "day": 59,
+    "title": "凯利准则（Kelly Criterion）",
+    "chineseName": "凯利准则",
+    "englishName": "Kelly Criterion",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-059.md",
+    "sha256": "6743b33cb9de8dba0e675510648f4f5ad956bbd8e357dd1cf0b227b76e19e825",
+    "source": "history",
+    "messageId": "14524722-3ecc-45dd-962e-256c81de6d6b",
+    "publishedOn": "2026-09-14",
+    "sources": []
+  },
+  {
+    "day": 60,
+    "title": "探索与利用（Exploration vs. Exploitation）",
+    "chineseName": "探索与利用",
+    "englishName": "Exploration vs. Exploitation",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-060.md",
+    "sha256": "1f19f8118b9ee7af74ae7d56caec26f3f690d014435bd8425447498cb6b9980a",
+    "source": "history",
+    "messageId": "2c84f5bc-dfd7-4ea6-b1a0-3d3ecf22e706",
+    "publishedOn": "2026-09-15",
+    "sources": []
+  },
+  {
+    "day": 61,
+    "title": "遍历性（Ergodicity）",
+    "chineseName": "遍历性",
+    "englishName": "Ergodicity",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-061.md",
+    "sha256": "def633775060bbf157af3207be03ea14644706891b734eb57ac08e5a0252c8ef",
+    "source": "history",
+    "messageId": "f5254a11-377c-4014-b460-3d8ec1123e2e",
+    "publishedOn": "2026-11-13",
+    "sources": []
+  },
+  {
+    "day": 62,
+    "title": "詹森不等式（Jensen's Inequality）",
+    "chineseName": "詹森不等式",
+    "englishName": "Jensen's Inequality",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-062.md",
+    "sha256": "f022e5c142950b2a188a66ac106f60db2653e686721dd4f42fbf77ffa684e0f0",
+    "source": "history",
+    "messageId": "0877013b-fe47-4eda-aea1-c8ab3b0ff89c",
+    "publishedOn": "2026-11-13",
+    "sources": []
+  },
+  {
+    "day": 63,
+    "title": "肥尾分布（Fat-Tailed Distributions）",
+    "chineseName": "肥尾分布",
+    "englishName": "Fat-Tailed Distributions",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-063.md",
+    "sha256": "557a05a40698734bab990165f3c1456ea79c06906ec83773216cb59666e75d30",
+    "source": "history",
+    "messageId": "60ed4549-a56b-4bc3-b50a-9c8cf9779b88",
+    "publishedOn": "2026-11-14",
+    "sources": [
+      {
+        "url": "https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/",
+        "title": "blogs.microsoft.com"
+      },
+      {
+        "url": "https://arstechnica.com/information-technology/2024/07/crowdstrike-blames-testing-bugs-for-security-update-that-took-down-8-5m-windows-pcs/",
+        "title": "arstechnica.com"
+      }
+    ]
+  },
+  {
+    "day": 64,
+    "title": "极值理论（Extreme Value Theory）",
+    "chineseName": "极值理论",
+    "englishName": "Extreme Value Theory",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-064.md",
+    "sha256": "31597103c47798e03f14b82ed502c6ecbd894c74e25d255b3915fc9e855b5a9b",
+    "source": "history",
+    "messageId": "340f3e4f-8477-4cef-a0e2-9466cecd37b8",
+    "publishedOn": "2026-11-15",
+    "sources": [
+      {
+        "url": "https://www.theweathernetwork.com/en/news/weather/forecasts/heat-dome-crumples-long-standing-records-rewrites-history-again-british-columbia",
+        "title": "www.theweathernetwork.com"
+      },
+      {
+        "url": "https://wmo.int/media/news/north-america-heatwave-almost-impossible-without-climate-change",
+        "title": "wmo.int"
+      },
+      {
+        "url": "https://science.nasa.gov/earth/earth-observatory/exceptional-heat-hits-pacific-northwest-148506/",
+        "title": "science.nasa.gov"
+      },
+      {
+        "url": "https://www.rmets.org/metmatters/record-breaking-heat-canada",
+        "title": "www.rmets.org"
+      },
+      {
+        "url": "https://www.kptv.com/2025/06/28/remembering-great-2021-heat-wave/",
+        "title": "www.kptv.com"
+      },
+      {
+        "url": "https://bildungsserver.hamburg.de/themenschwerpunkte/klimawandel-und-klimafolgen/klimafolgen/extremereignisse/hitzewellen-in-nordamerika-745288",
+        "title": "bildungsserver.hamburg.de"
+      },
+      {
+        "url": "https://www.theweathernetwork.com/en/news/weather/forecasts/british-columbia-village-scores-hottest-temperature-hat-trick-no-canadian-wants",
+        "title": "www.theweathernetwork.com"
+      },
+      {
+        "url": "https://www.columbia.edu/~amm26/lecture%20files/extremeEventsRiskMeasurement.pdf",
+        "title": "www.columbia.edu"
+      },
+      {
+        "url": "https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/pot_plot.htm",
+        "title": "www.itl.nist.gov"
+      },
+      {
+        "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr163.htm",
+        "title": "www.itl.nist.gov"
+      },
+      {
+        "url": "https://esd.copernicus.org/articles/13/1689/2022/",
+        "title": "esd.copernicus.org"
+      },
+      {
+        "url": "https://www.worldweatherattribution.org/western-north-american-extreme-heat-virtually-impossible-without-human-caused-climate-change/",
+        "title": "www.worldweatherattribution.org"
+      },
+      {
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2022GL099396",
+        "title": "agupubs.onlinelibrary.wiley.com"
+      },
+      {
+        "url": "https://eesm.science.energy.gov/research-highlights/anthropogenic-contributions-2021-pacific-northwest-heatwave",
+        "title": "eesm.science.energy.gov"
+      }
+    ]
+  },
+  {
+    "day": 65,
+    "title": "鲁棒优化（Robust Optimization）",
+    "chineseName": "鲁棒优化",
+    "englishName": "Robust Optimization",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-065.md",
+    "sha256": "8edaed18dd4404ab0ddf21e213b3c1fc066713a53af7dd57b40e81d497ed92c5",
+    "source": "history",
+    "messageId": "25c5fd7d-7058-4d8f-82f7-57c3948ba9d9",
+    "publishedOn": "2026-11-16",
+    "sources": [
+      {
+        "url": "https://arxiv.org/abs/1402.6361",
+        "title": "arxiv.org"
+      },
+      {
+        "url": "https://www.modelling-energy-systems.org/stable/appendix/robust-optimisation.html",
+        "title": "www.modelling-energy-systems.org"
+      },
+      {
+        "url": "https://pubsonline.informs.org/doi/pdf/10.1287/trsc.2019.0897",
+        "title": "pubsonline.informs.org"
+      },
+      {
+        "url": "https://ideas.repec.org/a/inm/oropre/v52y2004i1p35-53.html",
+        "title": "ideas.repec.org"
+      }
+    ]
+  },
+  {
+    "day": 66,
+    "title": "条件风险价值（CVaR）",
+    "chineseName": "条件风险价值",
+    "englishName": "CVaR",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-066.md",
+    "sha256": "cdd75989cf83adb22f771fa621a535aacb1633648eb3da97a158389d4fb4969b",
+    "source": "history",
+    "messageId": "72ee4ad9-9fd4-4bcd-b7c7-aca6273f6ec9",
+    "publishedOn": "2026-11-17",
+    "sources": [
+      {
+        "url": "https://www.bis.org/media-releases/20160114-revised-framework-market-risk-capital-requirements-issued-basel-committee",
+        "title": "www.bis.org"
+      },
+      {
+        "url": "https://www.bis.org/publications/201901-standards-minimum-capital-requirements-market-risk",
+        "title": "www.bis.org"
+      },
+      {
+        "url": "https://www.bis.org/committees/bcbs/basel-framework/standard/mar/33/inforce/2023-01-01/published/2020-06-05",
+        "title": "www.bis.org"
+      },
+      {
+        "url": "https://bishtref.com/articles/10.21314/jor.2000.038",
+        "title": "bishtref.com"
+      }
+    ]
+  },
+  {
+    "day": 67,
+    "title": "实物期权（Real Options）",
+    "chineseName": "实物期权",
+    "englishName": "Real Options",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-067.md",
+    "sha256": "40ed92de9c3e4d12e0b2ccf313f278e133d6e65b5057eee02a39508ce83fe6f3",
+    "source": "history",
+    "messageId": "9a97d085-82f2-4665-a7e6-56987547ad50",
+    "publishedOn": "2026-11-18",
+    "sources": [
+      {
+        "url": "https://www.nber.org/papers/w1980",
+        "title": "www.nber.org"
+      },
+      {
+        "url": "https://pubs.acs.org/doi/pdf/10.1021/ie020385p",
+        "title": "pubs.acs.org"
+      }
+    ]
+  },
+  {
+    "day": 68,
+    "title": "贝叶斯决策理论（Bayesian Decision Theory）",
+    "chineseName": "贝叶斯决策理论",
+    "englishName": "Bayesian Decision Theory",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-068.md",
+    "sha256": "8d5c8fbafa7ca1f54e898c063ad333933f537354dba89349423943d7e9c7135b",
+    "source": "history",
+    "messageId": "62a348a3-3252-48cf-9a92-92b38f97484e",
+    "publishedOn": "2026-11-19",
+    "sources": [
+      {
+        "url": "https://pubsonline.informs.org/do/10.1287/orms.2011.04.12/full/",
+        "title": "pubsonline.informs.org"
+      },
+      {
+        "url": "https://plato.stanford.edu/entries/decision-theory/index.html",
+        "title": "plato.stanford.edu"
+      },
+      {
+        "url": "https://hero.epa.gov/reference/2669862/",
+        "title": "hero.epa.gov"
+      },
+      {
+        "url": "https://www.metsci.com/what-we-do/featured-projects/the-search-for-air-france-447/",
+        "title": "www.metsci.com"
+      }
+    ]
+  },
+  {
+    "day": 69,
+    "title": "信息价值理论（Value of Information）",
+    "chineseName": "信息价值理论",
+    "englishName": "Value of Information",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-069.md",
+    "sha256": "77ca9c50d9315724b1a2b61cbaf0c24ba2e873d9886e82999498e5a4c9150c10",
+    "source": "history",
+    "messageId": "1ef9b2b7-6419-4e9c-bfe1-1f574d30a19d",
+    "publishedOn": "2026-11-20",
+    "sources": [
+      {
+        "url": "https://exp-platform.com/hbr-the-surprising-power-of-online-experiments/",
+        "title": "exp-platform.com"
+      },
+      {
+        "url": "https://exp-platform.com/Documents/2017-05-17EmetricsControlledExperimentsPitfallsKohaviNR.pdf",
+        "title": "exp-platform.com"
+      }
+    ]
+  },
+  {
+    "day": 70,
+    "title": "多臂老虎机问题（Multi-Armed Bandit）",
+    "chineseName": "多臂老虎机问题",
+    "englishName": "Multi-Armed Bandit",
+    "module": "概率、风险与学习",
+    "discipline": "概率、风险与学习",
+    "path": "content/lessons/day-070.md",
+    "sha256": "f30f1615678a1e9f4af2dea75ca05969d348b2f0d57b7a0807c3c280f536a1a7",
+    "source": "history",
+    "messageId": "9f202411-abbf-43d5-8d35-90b46b6ced59",
+    "publishedOn": "2026-11-21",
+    "sources": [
+      {
+        "url": "https://www.microsoft.com/en-us/research/publication/a-contextual-bandit-approach-to-personalized-news-article-recommendation-3/?lang=ko-kr%2Fbibtex%2F",
+        "title": "www.microsoft.com"
+      },
+      {
+        "url": "https://doi.org/10.1145/1772690.1772758",
+        "title": "doi.org"
+      }
+    ]
+  }
+]
