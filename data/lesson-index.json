@@ -1144,5 +1144,23 @@
         "title": "A Tutorial on Thompson Sampling"
       }
     ]
+  },
+  {
+    "day": 72,
+    "title": "置信上界（Upper Confidence Bound）",
+    "chineseName": "置信上界",
+    "englishName": "Upper Confidence Bound",
+    "module": "统计学与决策科学",
+    "discipline": "机器学习",
+    "path": "content/lessons/day-072.md",
+    "sha256": "88193be894b1fe7a5f54bded20c4f171b0b233ff8905fc422eb3ac391fe94c23",
+    "source": "generated",
+    "publishedOn": "2026-11-23",
+    "sources": [
+      {
+        "url": "https://people.eecs.berkeley.edu/~russell/classes/cs294/s11/readings/Auer%2Bal:2002.pdf",
+        "title": "Finite-time Analysis of the Multiarmed Bandit Problem"
+      }
+    ]
   }
 ]
