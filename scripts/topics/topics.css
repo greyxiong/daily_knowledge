@@ -1,0 +1,17 @@
+main { width: min(100%, 900px); margin: auto; padding: clamp(18px, 5vw, 52px) clamp(14px, 4vw, 40px) 64px; }
+.crumbs { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+h1 { font-size: clamp(26px, 4vw, 37px); letter-spacing: -.035em; line-height: 1.25; margin: 12px 0 28px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 280px),1fr)); gap: 14px; }
+.tile, .path { padding: 20px 24px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel); }
+.tile { color: var(--text); text-decoration: none; }
+.tile:hover, .tile:focus-visible { border-color: var(--accent); }
+.tile small { color: var(--accent); float: right; }
+.tile h2, .path h2 { margin: 0 0 8px; font-size: 20px; }
+.tile p { color: var(--muted); font-size: 14px; margin: 0; }
+.path { margin: 16px 0; }
+.path ol { padding-left: 1.6em; margin-bottom: 0; }
+.path li { padding: 4px; }
+.path li::marker { color: var(--muted); }
+.lesson-header h1 { margin: 8px 0 12px; }
+.lesson-nav { gap: 20px; flex-wrap: wrap; }
