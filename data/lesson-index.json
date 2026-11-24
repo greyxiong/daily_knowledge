@@ -1162,5 +1162,23 @@
         "title": "Finite-time Analysis of the Multiarmed Bandit Problem"
       }
     ]
+  },
+  {
+    "day": 73,
+    "title": "上下文老虎机（Contextual Bandits）",
+    "chineseName": "上下文老虎机",
+    "englishName": "Contextual Bandits",
+    "module": "统计学与决策科学",
+    "discipline": "机器学习",
+    "path": "content/lessons/day-073.md",
+    "sha256": "4882423b780615033059a806092a01fffa7f9da6f886240ef33d8887720c2f83",
+    "source": "generated",
+    "publishedOn": "2026-11-24",
+    "sources": [
+      {
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/p661.pdf",
+        "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation"
+      }
+    ]
   }
 ]
