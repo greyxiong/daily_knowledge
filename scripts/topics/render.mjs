@@ -37,7 +37,7 @@ export function writeTopics(publicDir, courses) {
     const count = domain.paths.reduce((n, p) => n + p.lessons.length, 0);
     return `<a class="tile" href="${domainURL(domain)}"><small>${count} 篇</small><h2>${esc(domain.title)}</h2><p>${esc(domain.paths[0].title)}</p></a>`;
   }).join('');
-  save('index.html', page('领域目录', '多元思维模型', `<h1>按领域阅读</h1><p>共 ${total} 篇 · ${courses.length} 篇每日课程 · ${guides.cards.length} 篇专题短课</p>
+  save('index.html', page('领域目录', '多元思维模型 · ' + link('/book/', '桌面小书'), `<h1>按领域阅读</h1><p>共 ${total} 篇 · ${courses.length} 篇每日课程 · ${guides.cards.length} 篇专题短课</p>
 <p>最新课程 · ${esc(latest.publishedOn)}　${link(lessonURL(latest), name(latest) + ' →')}</p><div class="tiles">` + tiles + '</div>'));
   for (const domain of groups) {
     const paths = domain.paths.map(p => `<section class="path"><h2>${esc(p.title)}</h2><ol>${p.lessons.map(c =>

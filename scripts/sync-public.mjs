@@ -24,6 +24,7 @@ fs.writeFileSync(path.join(publicDir,'data/courses.json'),json+'\n');
 fs.writeFileSync(path.join(root,'data/render-report.json'),JSON.stringify(issues,null,2)+'\n');
 fs.mkdirSync(path.join(publicDir,'assets'),{recursive:true});
 writeTopics(publicDir, courses);
+fs.cpSync(new URL('../book/',import.meta.url), path.join(publicDir,'book'), {recursive:true});
 fs.copyFileSync(new URL('./topics/reading.css',import.meta.url),path.join(publicDir,'assets/reading.css'));
 fs.copyFileSync(path.join(root,'node_modules/katex/dist/katex.min.css'),path.join(publicDir,'assets/katex.min.css'));
 fs.copyFileSync(path.join(root,'node_modules/katex/LICENSE'),path.join(publicDir,'assets/katex-LICENSE.txt'));
