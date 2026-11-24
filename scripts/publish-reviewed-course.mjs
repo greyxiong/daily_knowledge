@@ -28,11 +28,18 @@ export async function publishReviewedCourse({bundle,root=fileURLToPath(new URL('
    throw new GenerationError('RENDER_REJECTED','validate');
   }
   checkCritique(bundle.critique,new Set(bundle.openedUrls),bundle.draft,research);
+  const card = bundle.card;
+  if(day >= 74 && !card)throw new GenerationError('MISSING_CARD','validate');
+  if(card && !['definition','intuition','example'].every(key =>
+    typeof card[key] === 'string' && card[key].trim() && card[key].length <= 210)) {
+    throw new GenerationError('INVALID_CARD','validate');
+  }
   if(dryRun)return {status:'dry-run',day,date,path:await writePreview(root,day,date,bundle.draft.markdown)};
   const path=lessonPath(day);
   const {chineseName,englishName,module,discipline}=research;
   await publishLesson(root,publication,{day,title,chineseName,englishName,module,discipline,path,
-   sha256:checksum(bundle.draft.markdown),source:'generated',publishedOn:date,sources},bundle.draft.markdown);
+   sha256:checksum(bundle.draft.markdown),source:'generated',publishedOn:date,sources,
+   ...(card ? {card:{definition:card.definition,intuition:card.intuition,example:card.example}} : {})},bundle.draft.markdown);
   return {status:'published',day,date,path};
  }
  return dryRun?run():withPublicationLock(root,run);
