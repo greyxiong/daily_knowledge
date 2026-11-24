@@ -4,12 +4,12 @@
 <title>桌面小书 · 放在 Mac 桌面上的知识卡片</title>
 <meta name="description" content="点开桌面上的小书，读一个概念。在线试翻三张系统思维卡片，挑一套喜欢的外观，或到知识库继续读全文。">
 <meta property="og:title" content="桌面小书 · 随手翻开，读懂一个概念"><meta property="og:description" content="一本住在 Mac 桌面上的小书。来翻三张卡，试试四套外观。"><meta property="og:image" content="https://daily-knowledge-steel.vercel.app/book/media/preview.webp">
-<link rel="icon" href="./media/folio-cover.webp"><link rel="stylesheet" href="./style.css"><script src="./page.js" defer></script>
+<link rel="icon" href="./media/folio-cover.webp"><link rel="stylesheet" href="./style.css"><script src="./page.js" defer></script><script src="./download.js" defer></script>
 </head><body>
 <header class="bar"><a class="brand" href="#top"><img src="./media/folio-cover.webp" alt="" width="32" height="36">桌面小书</a><nav aria-label="主导航"><a href="/topics/">知识库</a><a href="#download">Mac 版</a></nav></header>
 <main id="top"><section class="hero" aria-labelledby="intro">
 <div class="pitch"><p class="overline">MAC 桌面阅读</p><h1 id="intro">在桌面，<br><em>翻一本小书。</em></h1><p class="lede">工作间隙点开一张卡，读懂一个概念。<br class="wide">想再多读一点，就顺着这个领域翻下去。</p>
-<div class="actions"><a class="primary" href="#try">先翻三张</a><a class="secondary" href="#download">Mac 版下载信息</a></div></div>
+<div class="actions"><a class="primary" href="#try">先翻三张</a><a class="secondary" id="mac-hero" href="#download">Mac 版下载信息</a></div></div>
 <figure class="cinema"><div class="filmbar"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span>桌面演示</span><span>00:10</span></div>
 <video controls playsinline muted preload="none" aria-label="十秒演示，从书页猫封面展开卡片、翻页并切换外观" poster="./media/preview.webp" src="./media/demo.mp4"></video></figure>
 </section>
@@ -24,5 +24,5 @@
 <div class="cardcontent"><div class="meta"><span>系统思维</span><span id="position">1 / 3</span></div><div id="sections" aria-live="polite"><section><h3>什么是「反馈回路」</h3><p>反馈回路指一次行动的结果反过来影响下一轮行动。</p></section><section><h3>直觉理解</h3><p>沿着因果关系走一圈，看最初的变化会怎样。变化被放大，叫正反馈。变化被抵消，叫负反馈。</p></section><section><h3>一个例子</h3><p>把空调设到 24°C。房间升到 27°C 时，空调开始制冷。室温降回设定值，制冷就会减弱或停止。这是负反馈。</p></section></div>
 <nav class="paging" aria-label="卡片翻页"><a href="/topics/lesson-1.html" id="full">读全文</a><button id="back" type="button">上一张</button><button id="next" type="button">下一张</button></nav></div></article></div>
 </section>
-<section id="download" class="download"><div><p class="overline">MAC 版</p><h2>把小书放到桌面上。</h2><p>公开安装包正在准备中。当前 v0.5.2 为本机编译的源码试用版。<br>现在就可以在浏览器里试读，也可以到知识库读全文。</p></div><a class="light" href="/topics/">打开知识库</a></section>
+<section id="download" class="download"><div><p class="overline">MAC 版</p><h2>把小书放到桌面上。</h2><p id="mac-status">Mac 版将以 .dmg 提供。公开安装包准备期间，可以先在网页上翻三张。</p></div><a class="light" id="mac-action" href="#try">先翻三张</a></section>
 </main><script type="application/json" id="examples">[{"day": 1, "title": "反馈回路", "definition": "反馈回路指一次行动的结果反过来影响下一轮行动。", "intuition": "沿着因果关系走一圈，看最初的变化会怎样。变化被放大，叫正反馈。变化被抵消，叫负反馈。", "example": "把空调设到 24°C。房间升到 27°C 时，空调开始制冷。室温降回设定值，制冷就会减弱或停止。这是负反馈。", "group": "系统思维"}, {"day": 2, "title": "存量与流量", "definition": "存量是某一刻已经积累的量。流量是每单位时间流入或流出的量。", "intuition": "把它想成浴缸。水位取决于之前积了多少水，以及此刻进水和排水的速度差。", "example": "即使每天都有很多新用户加入，只要离开的人同样多，总用户数也会停在原地。", "group": "系统思维"}, {"day": 3, "title": "延迟", "definition": "延迟是行动发生到效果显现之间的时间差。", "intuition": "等待反馈时，最容易把「还没看到变化」当成「刚才做得不够」。这时再加力，几次调整的效果可能随后一起到来。", "example": "央行加息后，企业借钱变贵，可能推迟投资。等到需求放缓、物价涨势回落，可能已过去几个月。", "group": "系统思维"}]</script><footer><span>桌面小书</span><a href="https://github.com/greyxiong/daily_knowledge/issues/new?title=%E6%A1%8C%E9%9D%A2%E5%B0%8F%E4%B9%A6%E5%8F%8D%E9%A6%88">反馈问题（GitHub）</a></footer></body></html>
