@@ -42,14 +42,6 @@
         width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 8px;
         background: var(--bg); color: var(--text); cursor: pointer;
       }
-      .progress-panel {
-        padding: 13px; border: 1px solid var(--line); border-radius: 8px;
-        background: var(--panel-strong); margin-bottom: 14px;
-      }
-      .progress-panel div:first-child { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 13px; }
-      .progress-panel strong { color: var(--text); }
-      .progress-bar { height: 7px; overflow: hidden; margin-top: 9px; border-radius: 999px; background: var(--line); }
-      .progress-bar span { display: block; height: 100%; width: 0; border-radius: inherit; background: var(--accent); transition: width 180ms ease; }
       .toc-group { padding: 12px 0; border-top: 1px solid var(--line); }
       .toc-heading { display: flex; justify-content: space-between; margin: 0 4px 7px; font-weight: 750; }
       .toc-heading small { color: var(--muted); font-weight: 600; }

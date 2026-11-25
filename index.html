@@ -24,17 +24,13 @@
           </label>
           <button id="theme" class="icon-button" aria-label="切换深色模式">◐</button>
         </div>
-        <div class="progress-panel">
-          <div><span>阅读进度</span><strong id="progress-text">0 / 0</strong></div>
-          <div class="progress-bar"><span id="progress-bar"></span></div>
-        </div>
         <details id="directory" open><summary>课程目录 · <span id="directory-count">70</span> 课</summary><nav id="toc" class="toc" aria-label="课程目录"></nav></details>
       </aside>
       <main class="content">
         <section class="hero">
           <p>每日一课</p>
           <h2>多学科思维模型学习地图</h2>
-          <div id="site-intro">历史课程已恢复。你的已读状态、阅读进度和练习笔记保存在当前浏览器。</div><p><a id="latest-lesson" href="#day-70">阅读最新一课 →</a>　<a href="./topics/">按领域阅读 →</a></p>
+          <div id="site-intro">历史课程已恢复。你的已读状态和练习笔记保存在当前浏览器。</div><p><a id="latest-lesson" href="#day-70">阅读最新一课 →</a>　<a href="./topics/">按领域阅读 →</a></p>
         </section>
         <div id="lessons" class="lesson-list"></div>
       </main>
@@ -72,9 +68,8 @@
         $("#directory-count").textContent = state.courses.length;
         $("#latest-lesson").href = `#day-${state.courses.at(-1).day}`;
         $("#site-intro").textContent = state.courses.some(c => c.source === "generated")
-          ? "每天中午更新一课。你的已读状态、阅读进度和练习笔记保存在当前浏览器。"
-          : "Day 1–70 历史课程已恢复，每日更新准备中。你的已读状态、阅读进度和练习笔记保存在当前浏览器。";
-        renderProgress();
+          ? "每天中午更新一课。你的已读状态和练习笔记保存在当前浏览器。"
+          : "Day 1–70 历史课程已恢复，每日更新准备中。你的已读状态和练习笔记保存在当前浏览器。";
         $("#toc").innerHTML = Object.entries(grouped(courses)).map(([module, items]) => `
           <section class="toc-group">
             <div class="toc-heading"><span>${escapeHtml(module)}</span><small>${items.length}</small></div>
@@ -116,18 +111,11 @@
           </article>
         `;
       }
-      function renderProgress() {
-        const total = state.courses.length;
-        const done = state.courses.filter((course) => state.read[course.day]).length;
-        $("#progress-text").textContent = `${done} / ${total}`;
-        $("#progress-bar").style.width = total ? `${Math.round(done / total * 100)}%` : "0";
-      }
       function bindLessonInputs() {
         document.querySelectorAll("[data-read]").forEach((box) => {
           box.addEventListener("change", () => {
             state.read[box.dataset.read] = box.checked;
             save("mental-model-read", state.read);
-            renderProgress();
             const mark = document.querySelector(`[data-read-mark="${box.dataset.read}"]`);
             if (mark) mark.textContent = box.checked ? "✓" : "";
           });
