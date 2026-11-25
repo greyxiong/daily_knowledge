@@ -1180,5 +1180,28 @@
         "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation"
       }
     ]
+  },
+  {
+    "day": 74,
+    "title": "累积遗憾（Cumulative Regret）",
+    "chineseName": "累积遗憾",
+    "englishName": "Cumulative Regret",
+    "module": "统计学与决策科学",
+    "discipline": "在线学习",
+    "path": "content/lessons/day-074.md",
+    "sha256": "b81aa0d3cf477334649c54dd733339942ff87246a19ef46f3fd297a916631939",
+    "source": "generated",
+    "publishedOn": "2026-11-25",
+    "sources": [
+      {
+        "url": "https://people.eecs.berkeley.edu/~russell/classes/cs294/s11/readings/Auer%2Bal:2002.pdf",
+        "title": "Finite-time Analysis of the Multiarmed Bandit Problem"
+      }
+    ],
+    "card": {
+      "definition": "累积遗憾衡量学习过程中，相对指定理想基准累计放弃了多少预期收益。比较前必须说清奖励、期限和基准。",
+      "intuition": "最后选对，不等于学习代价小。每次探索的代价等于该选项与最佳均值的差，再把这些差累加。",
+      "example": "假设最佳成功率为0.8，另两个为0.65和0.4，分别选择40次、20次，均值差总账为0.15×40＋0.4×20＝14。"
+    }
   }
 ]
