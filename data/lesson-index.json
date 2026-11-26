@@ -1203,5 +1203,28 @@
       "intuition": "最后选对，不等于学习代价小。每次探索的代价等于该选项与最佳均值的差，再把这些差累加。",
       "example": "假设最佳成功率为0.8，另两个为0.65和0.4，分别选择40次、20次，均值差总账为0.15×40＋0.4×20＝14。"
     }
+  },
+  {
+    "day": 75,
+    "title": "故障树分析（Fault Tree Analysis）",
+    "chineseName": "故障树分析",
+    "englishName": "Fault Tree Analysis",
+    "module": "系统与工程",
+    "discipline": "安全工程",
+    "path": "content/lessons/day-075.md",
+    "sha256": "68bd5be936c0703482d017dff0bf83a21ee1224aa3cc9ee7db03b44dc3bf79be",
+    "source": "generated",
+    "publishedOn": "2026-11-26",
+    "sources": [
+      {
+        "url": "https://extapps.ksc.nasa.gov/Reliability/Documents/Fault_Tree_Handbook_with_Aerospace_Applications_August_2002.pdf",
+        "title": "Fault Tree Handbook with Aerospace Applications"
+      }
+    ],
+    "card": {
+      "definition": "从明确的顶事件出发，用与门和或门推导哪些基本故障组合足以触发它，并找出不可再删减的组合。",
+      "intuition": "两条备用路径若共用一个身份服务，该服务失效一次就足以让两条路径都不可用。",
+      "example": "若身份服务失效概率为1%，其正常时两条路径各自以2%概率独立失效，整体失效概率为1.0396%。"
+    }
   }
 ]
