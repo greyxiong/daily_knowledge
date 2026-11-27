@@ -1226,5 +1226,32 @@
       "intuition": "两条备用路径若共用一个身份服务，该服务失效一次就足以让两条路径都不可用。",
       "example": "若身份服务失效概率为1%，其正常时两条路径各自以2%概率独立失效，整体失效概率为1.0396%。"
     }
+  },
+  {
+    "day": 76,
+    "title": "共因故障（Common-Cause Failure）",
+    "chineseName": "共因故障",
+    "englishName": "Common-Cause Failure",
+    "module": "系统与工程",
+    "discipline": "可靠性工程",
+    "path": "content/lessons/day-076.md",
+    "sha256": "c6098c26790432f813250a047477ad94a88bc3f3a202f84511f69549027e055f",
+    "source": "generated",
+    "publishedOn": "2026-11-27",
+    "sources": [
+      {
+        "url": "https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/",
+        "title": "Cloudflare outage on June 21, 2022"
+      },
+      {
+        "url": "https://extapps.ksc.nasa.gov/Reliability/Documents/Fault_Tree_Handbook_with_Aerospace_Applications_August_2002.pdf",
+        "title": "Fault Tree Handbook with Aerospace Applications"
+      }
+    ],
+    "card": {
+      "definition": "同一个原因让多个组件失效。分析时按共同触发事件和受影响组件组评估冗余的实际保护。",
+      "intuition": "新副本可以抵御更多彼此独立的故障。同一次变更能让整组失效时，增加同组副本无法降低这部分风险。",
+      "example": "两份备份都受同一同步删除影响。保留可独立恢复的离线副本，可改变这次误删能够影响的范围。"
+    }
   }
 ]
