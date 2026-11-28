@@ -1253,5 +1253,28 @@
       "intuition": "新副本可以抵御更多彼此独立的故障。同一次变更能让整组失效时，增加同组副本无法降低这部分风险。",
       "example": "两份备份都受同一同步删除影响。保留可独立恢复的离线副本，可改变这次误删能够影响的范围。"
     }
+  },
+  {
+    "day": 77,
+    "title": "模块化与接口（Modularity and Interfaces）",
+    "chineseName": "模块化与接口",
+    "englishName": "Modularity and Interfaces",
+    "module": "系统与工程",
+    "discipline": "系统工程",
+    "path": "content/lessons/day-077.md",
+    "sha256": "3aeb62ad804ee6a7eb0710d96fd7dd4d9b6a2464989dab38a22904180dece822",
+    "source": "generated",
+    "publishedOn": "2026-11-28",
+    "sources": [
+      {
+        "url": "https://ckrybus.com/static/papers/decomposing_systems_into_modules_1972.pdf",
+        "title": "On the Criteria To Be Used in Decomposing Systems into Modules"
+      }
+    ],
+    "card": {
+      "definition": "把易变的设计决定放进负责它的模块，用清晰的接口约定调用方可以依赖的行为。",
+      "intuition": "接口保证继续成立时，内部实现可以替换。检查一次可能的变更会波及哪些模块，就能比较不同分界。",
+      "example": "报表调用方按字段读取数据，存储模块自行管理列号。换存储格式时，可以集中修改存储模块。"
+    }
   }
 ]
